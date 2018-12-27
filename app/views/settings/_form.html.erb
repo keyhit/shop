@@ -1,0 +1,7 @@
+<%= bootstrap_form_with model: @setting, local: true do |f| %>
+  <%#= f.text_field :set_key %>
+  <%= f.select :set_key, [['username', 'username'], ['domain', 'domain'], ['phone', 'phone']] %>
+  <%= f.text_field :set_value %>
+  <%= f.submit %>
+<% end %>
+

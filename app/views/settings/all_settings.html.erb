@@ -1,0 +1,40 @@
+<ul>
+  <li>
+    <%= link_to "Create new setting", new_setting_path %>
+  </li>
+  <li>
+    <%= link_to "Index settings", settings_path %>
+  </li>
+</ul>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Key</th>
+    <th>Value</th>
+    <th>Edit</th>
+    <th>Destroy</th>
+  </tr>
+    <% @settings.each do |setting| %>
+  <tr>
+    <td>
+        <%= setting.id %>
+    </td>
+     <td>
+        <%= setting.set_key %>
+    </td>
+    <td>
+        <%= setting.set_value %>
+    </td>
+    <td>
+        <%= link_to "Edit", edit_setting_path(setting) %>
+    </td>
+    <td>
+        <%= link_to 'Destroy', setting_path(setting),
+          method: :delete,
+          remote: true,
+          data: { confirm: 'Are you sure?' } %>
+    </td>
+  </tr>
+    <% end %>
+</table>
