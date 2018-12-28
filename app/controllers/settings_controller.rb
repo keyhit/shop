@@ -4,6 +4,10 @@ class SettingsController < ApplicationController
     pairs = Setting.pluck(:set_key, :set_value)
     pairs.each { |key, value| @setting[key] = value }
     @setting
+    respond_to do |format|
+      format.html
+      format.json { render json: @setting }
+    end
   end
 
   def all_settings

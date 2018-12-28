@@ -38,8 +38,9 @@ body {
 }
 
 header {
+    width: 100%;
+    height: 131px;
   background-color: #24527a;
-  width: 100%;
   border-bottom: solid 1px #930303;
 }
 
@@ -188,16 +189,25 @@ width: 100px;
     margin-left: -42px;
 }
 
+.contacts {
+    display: flex;
+    flex-direction: column;
+    color: #daddd1;
+    padding: 2;
+    margin-top: -67px;
+    margin-left: 67%;
+    margin-bottom: 20px;
+}
+#email a {
+    text-decoration: none;
+    color: #dde0e4;
+}
 
-
-
-
-
-
-
-
-
-
+#email a:hover {
+  text-decoration: none;
+  color: #5dacbd;
+  border-bottom: solid 1px yellow;
+}
 
 footer {
     position: inherit;

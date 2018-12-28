@@ -13,6 +13,11 @@
     <header>
       <%= image_tag 'logo', class: "logo", alt: "e-shop logo"%>
       <%= render 'layouts/menu'%>
+      <div class="contacts">
+
+        <div id="phone"></div>
+        <div id="email"></div>
+      <div>
     </header>
     <% if flash[:notice] %>
       <div class="notice"><%= flash[:notice] %></div>
@@ -23,3 +28,14 @@
     </footer>
   </body>
 </html>
+<script type="text/javascript">
+  $.ajax({
+    dataType: "json",
+    url: '<%= "#{root_url}#{settings_path}"%>',
+  })
+  .done(function( data ) {
+    console.log(data)
+    $('#email').html('<a href="mailto:' + data.username + '@' + data.domain + '">Email: ' + data.username + '@' + data.domain + ' </a>')
+    $('#phone').html('Phone: +38' + data.phone)
+  });
+</script>

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :settings
+  resources :admins
   get 'all_settings', to: 'settings#all_settings', as: 'all_settings'
   resources :categories
 
