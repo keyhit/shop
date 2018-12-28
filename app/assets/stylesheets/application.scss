@@ -12,4 +12,156 @@
  *
  *= require rails_bootstrap_forms
  */
+ //= require 'flexbox'
 @import "bootstrap";
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background: #f7f9fa;
+  width: 100%;
+  height: 300px;
+
+}
+
+header {
+  background-color: #24527a;
+  width: 100%;
+}
+
+.logo {
+  width: 130px;
+  height: 130px;
+  display: flex;
+  justify-content: left;
+}
+
+.logo:hover {
+  background: #434033;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  padding: 1px;
+}
+
+nav {
+  float: right;
+  margin-top: -9%;
+  margin-right: 1%;
+  padding-top: 1px;
+  width: 42%;
+  height: 31px;
+  display: flex;
+}
+
+.top_nav {
+  /*display: flex;*/
+  float: right;
+  font-size: 14px;
+}
+
+.top_nav a {
+  color: #dde0e4;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 15px;
+}
+
+.top_nav a:hover {
+  text-decoration: none;
+  color: #5dacbd;
+  border-bottom: solid 1px yellow;
+}
+
+.side_nav {
+  width: 22%;
+  float: left;
+}
+
+.categories {
+  margin: 12px 12px 39px 1%;
+  width: 90%;
+  height: auto;
+}
+
+.categories h3 {
+  text-align: center;
+}
+
+.category {
+  display: flex;
+  background: #24527a;
+  margin: 3px;
+}
+
+.category:hover {
+  background: #1a5562;
+  border-bottom: solid 1px yellow;
+}
+
+.category a {
+  color: #dde0e4;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 15px;
+}
+
+.category a:hover {
+  text-decoration: none;
+}
+.product_preview {
+    width: 75%;
+    position: absolute;
+    margin-left: 20%;
+    margin-top: 2%;
+}
+
+
+
+
+.product {
+height: 211px;
+    width: 165px;
+    margin: 20px;
+    float: right;
+    display: inline-flex;
+    background-color: #f7f9fa;
+    border: solid 1px #24527a;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+  position: fixed;
+  margin-top: 10px;
+  left: 0;
+  bottom: 0;
+  background-color: #24527a;
+  width: 100%;
+  height: 35px;
+}

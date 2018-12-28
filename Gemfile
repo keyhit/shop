@@ -7,6 +7,7 @@ gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-rails'
 gem 'mini_racer'
 gem 'bootstrap_form', '>= 4.0.0'
+gem 'flexbox-rails', '~> 1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
