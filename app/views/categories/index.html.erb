@@ -1,21 +1,12 @@
 <div class="side_nav">
-  <div class="categories">
-  <h3>Categories</h3>
-    <% @categories.each do |category| %>
-      <span class="category">
-        <%= link_to category.name, "#" %>
-      </span>
-    <% end %>
-        <span class="category">
-        <%= link_to "More categories", "#" %>
-      </span>
-  </div>
+
 
   <div class="categories">
   <h3>Categories tags</h3>
     <% @categories.each do |category| %>
-      <span class="category">
-        <%= link_to category.name, "#" %>
+      <span >
+        <%= link_to category.name, "#",
+          class: "category"%>
       </span>
     <% end %>
         <span class="category">
@@ -27,39 +18,72 @@
   <!-- <h3>Categories</h3> -->
 
 <div class="product_preview">
-  <div class="product">
-    sdfsdf
-  </div>
-
-  <div class="product">
-    sdfdsf
-  </div>
+    <h3>Products</h3>
+    <div class="products_block">
     <div class="product">
-    sdfsdf
-  </div>
+      <h6>sdfsdf</h6>
+      <%= image_tag 'logo', class: "img", alt: "e-shop logo"%>
+    </div>
 
-  <div class="product">
-    sdfdsf
-  </div>
     <div class="product">
-    sdfsdf
-  </div>
+      sdfdsf
+    </div>
+      <div class="product">
+      <h6>sdfsdf</h6>
+      <%= image_tag 'logo', class: "img", alt: "e-shop logo"%>
+    </div>
 
-  <div class="product">
-    sdfdsf
-  </div>
     <div class="product">
-    sdfsdf
-  </div>
+      sdfdsf
+    </div>
+      <div class="product">
+      <h6>sdfsdf</h6>
+      <%= image_tag 'logo', class: "img", alt: "e-shop logo"%>
+    </div>
 
-  <div class="product">
-    sdfdsf
-  </div>
     <div class="product">
-    sdfsdf
-  </div>
+      sdfdsf
+    </div>
+      <div class="product">
+      <h6>sdfsdf</h6>
+      <%= image_tag 'logo', class: "img", alt: "e-shop logo"%>
+    </div>
 
-  <div class="product">
-    sdfdsf
-  </div>
+    <div class="product">
+      sdfdsf
+    </div>
+      <div class="product">
+      <h6>sdfsdf</h6>
+      <%= image_tag 'logo', class: "img", alt: "e-shop logo"%>
+    </div>
+
+    <div class="product">
+      sdfdsf
+    </div>
+
+    <div class="product">
+      <h6>sdfsdf</h6>
+      <%= image_tag 'logo', class: "img", alt: "e-shop logo"%>
+    </div>
+
+    <div class="product">
+      sdfdsf
+    </div>
+      <div class="product">
+      <h6>sdfsdf</h6>
+      <%= image_tag 'logo', class: "img", alt: "e-shop logo"%>
+    </div>
+
+    <div class="product">
+      sdfdsf
+    </div>
+      <div class="product">
+      <h6>sdfsdf</h6>
+      <%= image_tag 'logo', class: "img", alt: "e-shop logo"%>
+    </div>
+
+    <div class="product">
+      sdfdsf
+    </div>
+    </div>
 </div>
