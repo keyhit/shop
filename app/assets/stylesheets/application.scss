@@ -59,7 +59,7 @@ header {
 
 nav {
     float: right;
-    margin-top: -116px;
+    margin-top: -123px;
     margin-right: 1%;
     padding-top: 1px;
     width: 42%;
@@ -189,16 +189,20 @@ width: 100px;
     margin-left: -42px;
 }
 
+.search {
+    margin-left: 35%;
+    margin-top: -39px;
+}
 .contacts {
     display: flex;
     flex-direction: column;
     color: #daddd1;
     padding: 2;
-    margin-top: -67px;
+    margin-top: -88px;
     margin-left: 67%;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
-#email a {
+#email a, #phone{
     text-decoration: none;
     color: #dde0e4;
 }
@@ -207,6 +211,29 @@ width: 100px;
   text-decoration: none;
   color: #5dacbd;
   border-bottom: solid 1px yellow;
+}
+
+.cart {
+    z-index: 2;
+    display: block;
+    /* background-color: #dde0e4; */
+    width: 6%;
+    margin-left: 89%;
+    margin-top: -49px;
+    border-radius: 53px;
+}
+
+.cart_amount {
+position: absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #f52828;
+    margin-left: 93%;
+    margin-top: -2%;
+    color: #ffffff;
+    font-size: 139%;
+    border-radius: 12px;;
 }
 
 footer {

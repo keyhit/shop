@@ -14,10 +14,17 @@
       <%= image_tag 'logo', class: "logo", alt: "e-shop logo"%>
       <%= render 'layouts/menu'%>
       <div class="contacts">
-
         <div id="phone"></div>
         <div id="email"></div>
-      <div>
+      </div>
+      <div class="search">
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+      <%= image_tag 'iconfinder_eccomerce_-_shopping_cart_3440920', class: "cart", alt: "e-shop cart"%>
+      <div class="cart_amount"></div>
     </header>
     <% if flash[:notice] %>
       <div class="notice"><%= flash[:notice] %></div>
@@ -38,4 +45,6 @@
     $('#email').html('<a href="mailto:' + data.username + '@' + data.domain + '">Email: ' + data.username + '@' + data.domain + ' </a>')
     $('#phone').html('Phone: +38' + data.phone)
   });
+
+  $('.cart_amount').html('10')
 </script>
