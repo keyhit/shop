@@ -68,16 +68,16 @@ nav {
 }
 
 .top_nav {
-  /*display: flex;*/
+  display: flex;
   float: right;
   font-size: 14px;
 }
 
 .top_nav a {
-  color: #dde0e4;
-  text-align: center;
-  padding: 14px 16px;
-  font-size: 15px;
+    color: #dde0e4;
+    text-align: center;
+    padding: 5px 21px;
+    font-size: 15px;
 }
 
 .top_nav a:hover {
@@ -118,6 +118,7 @@ nav {
     color: #24527a;
     box-shadow: 0px 1px 2px #acc4dc;
 }
+
 
 .category:hover {
     background: #24527a;
@@ -190,17 +191,16 @@ width: 100px;
 }
 
 .search {
-    margin-left: 35%;
-    margin-top: -39px;
+    margin-left: 628px;
+    margin-top: -71px;
 }
 .contacts {
     display: flex;
     flex-direction: column;
     color: #daddd1;
     padding: 2;
-    margin-top: -88px;
-    margin-left: 67%;
-    /* margin-bottom: 20px; */
+    margin-top: -56px;
+    margin-left: 949px;
 }
 #email a, #phone{
     text-decoration: none;
@@ -214,13 +214,12 @@ width: 100px;
 }
 
 .cart {
-    z-index: 2;
     display: block;
     /* background-color: #dde0e4; */
     width: 6%;
-    margin-left: 89%;
-    margin-top: -49px;
-    border-radius: 53px;
+    margin-left: 90%;
+    margin-top: -61px;
+    border-radius: 53px;;
 }
 
 .cart_amount {

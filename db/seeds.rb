@@ -10,7 +10,7 @@ Setting.create(set_key: 'username', set_value: '_slavka')
 Setting.create(set_key: 'domain', set_value: 'bigmir.net')
 Setting.create(set_key: 'phone', set_value: '06969490444')
 
-categories = %w[Smartphones Tablets Laptops Accessories]
+categories = %w[Smartphones Tablets Laptops Accessories Kitchen Home Rest Traver Tools]
 
 categories.each do |category|
   Category.create(name: category)
