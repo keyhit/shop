@@ -191,16 +191,17 @@ width: 100px;
 }
 
 .search {
-    margin-left: 628px;
+    margin-left: 43%;
     margin-top: -71px;
 }
 .contacts {
+    /*display: block;*/
     display: flex;
     flex-direction: column;
     color: #daddd1;
     padding: 2;
     margin-top: -56px;
-    margin-left: 949px;
+    margin-left: 72%;
 }
 #email a, #phone{
     text-decoration: none;

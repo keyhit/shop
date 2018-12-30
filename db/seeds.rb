@@ -12,6 +12,22 @@ Setting.create(set_key: 'phone', set_value: '06969490444')
 
 categories = %w[Smartphones Tablets Laptops Accessories Kitchen Home Rest Traver Tools]
 
+short_description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+
+full_description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+preview_image = '/app/assets/images/samsung2.jpg'
+
 categories.each do |category|
-  Category.create(name: category)
+  category = Category.create(name: category)
+  20.times do
+    Product.create(
+      title: 'Samsung Galaxy A7 2017',
+      price: 7999,
+      short_description: short_description,
+      full_description: full_description,
+      in_stock: true,
+      preview_image: preview_image,
+      category_id: category.id
+    )
+  end
 end

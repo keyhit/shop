@@ -91,7 +91,6 @@
     </div>
     </div>
 </div>
-<%= @categories_count %>
 <script type="text/javascript">
   // var offset = 0
     $('#hide_more_categories').hide()
@@ -102,7 +101,7 @@
       $('<div id="more_categories"></div>').appendTo("#more");
 
       // offset += 2
-        var offset = 0
+      var offset = 0
       offset += <%= @categories.count %>
       limit = <%= @categories_count %> - offset
       console.log("offset" + offset)
