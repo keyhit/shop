@@ -1,14 +1,19 @@
 <div class="categories">
   <h3>Admin actions</h3>
-    <span >
-      <%= link_to "Change email && phone", settings_path,
-        class: "category"%>
+    <span>
+      <%= link_to "Change email && phone",
+        settings_path,
+        class: "category" %>
     </span>
-    <span class="category">
-      <%= link_to "Categories management", categories_admin_path %>
+    <span>
+      <%= link_to "Categories management",
+        categories_admin_path,
+        class: "category" %>
     </span>
-    <span class="category">
-      <%= link_to "More categories", "#" %>
+    <span>
+      <%= link_to "Products management",
+        products_by_category_path,
+        class: "category" %>
     </span>
     <span class="category">
       <%= link_to "More categories", "#" %>

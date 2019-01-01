@@ -18,11 +18,11 @@ class CategoriesController < ApplicationController
   end
 
   def categories_admin
-    @categories ||= Category.all
+    @categories = Category.all
   end
 
   def show
-    @category ||= Category.find(params[:id])
+    @category = Category.find(params[:id])
   end
 
   def new
@@ -36,7 +36,7 @@ class CategoriesController < ApplicationController
   end
 
   def edit
-    @category ||= Category.find(params[:id])
+    @category = Category.find(params[:id])
   end
 
   def update
@@ -52,6 +52,7 @@ class CategoriesController < ApplicationController
       redirect_to categories_admin_path, notice: 'Category has been destroyed!'
     end
   end
+
   private
 
   def categories_params
