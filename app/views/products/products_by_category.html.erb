@@ -1,16 +1,11 @@
 <h3>Params for products lookup </h3>
 <%= bootstrap_form_with url: products_by_category_path, local: true, method: :get do |f| %>
-  <%= f.check_box :by_word, label: "By key word" %>
-  <%= f.text_field :word,
-    label: "By id",
-    hide_label: true %>
-
-  <%= f.check_box :by_id, label: "By product id" %>
+  <%= f.radio_button :search_by, 0, label: "By product id or key word", checked: true %>
   <%= f.text_field :id,
     label: "By id",
     hide_label: true %>
 
-  <%= f.check_box :by_category, label: "By category" %>
+  <%= f.radio_button :search_by, 1, label: "By category" %>
   <%#= binding.pry %>
 
   <%= f.select :name,
