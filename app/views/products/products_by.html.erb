@@ -1,0 +1,25 @@
+<%= @p %>
+<h3>Params for products lookup </h3>
+<%= bootstrap_form_with url: products_by_path, local: true, method: :get do |f| %>
+  <%= f.check_box :by_id_keyword, label: "Product id or key word" %>
+  <%= f.text_field :keyword,
+    hide_label: true %>
+
+  <%#= f.check_box :by_price , label: "Price" %>
+  <%#= f.select :price_range,
+    Product.all.map { |e| e.price}.uniq,
+    hide_label: true %>
+
+  <%= f.select :price_range,
+    Product::PRICE.map { |e| "#{e[0]} - #{e[1]}" }.unshift("Select range"),
+    label: "Pice range" %>
+
+  <%= f.select :category,
+    @categories.collect {|p| [ p.name, p.id ] }.unshift("Select category"),
+    label: "Category" %>
+  <%= f.submit 'Show' %>
+<% end %>
+<hr>
+<%= @range if @range.present? %> 
+<%= @cat if @cat.present? %> 
+<%= render template: "products/product"  if @products_by.present? %> 

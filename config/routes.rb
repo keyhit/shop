@@ -7,8 +7,8 @@ Rails.application.routes.draw do
     resources :products
   end
   get 'categories_admin', to: 'categories#categories_admin', as: 'categories_admin'
-  get 'products_by_category', to: 'products#products_by_category', as: 'products_by_category'
-  post 'products_by/:id', to: 'products#products_by_category', as: 'select_products_by'
+  get 'products_by', to: 'products#products_by', as: 'products_by'
+
 
   root 'categories#index'
 end

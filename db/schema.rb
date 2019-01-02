@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2018_12_30_214541) do
 
   create_table "products", force: :cascade do |t|
     t.string "title"
-    t.decimal "price"
+    t.float "price"
     t.string "short_description"
     t.string "full_description"
     t.boolean "in_stock"

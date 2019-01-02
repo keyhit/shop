@@ -22,7 +22,7 @@ categories.each do |category|
   20.times do
     Product.create(
       title: 'Samsung Galaxy A7 2017',
-      price: 7999,
+      price: rand(1.0..10000.0).round(2),
       short_description: short_description,
       full_description: full_description,
       in_stock: true,

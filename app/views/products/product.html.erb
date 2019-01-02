@@ -1,7 +1,7 @@
 
-<h3>Products</h3>
+<h3><%= @products_count%> <%= @products_count > 1 ? "products" : "product"%> finded</h3>
 <hr>
-<% @products_by_category.each do |product| %>
+<% @products_by.each do |product| %>
   <h6>
     <%= product.title %>
   </h6>
@@ -12,7 +12,7 @@
     Price: <%= product.price %>
   </p>
   <p>
-    Short_description :<%= product.short_description %>
+    Short_description: <%= product.short_description %>
   </p>
   <p>
     Full_description: <%= product.full_description %>
@@ -24,7 +24,7 @@
     <%= image_tag product.preview_image %>
   </p>
   <p>
-    Category name <%= product.category.name %>
+    Category name: <%= product.category.name %>
   </p>
   <hr>
 <% end %>
