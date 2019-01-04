@@ -1,8 +1,17 @@
 class ProductsController < ApplicationController
   def products_by
     @categories ||= Category.all
-    if params[:commit] =='Show'
-      unless params[:price_range] == 'Select range' && params[:category] == "Select category"
+
+    if params[:keyword].present?
+      @products_by = Product.where("id = ? OR title LIKE ? OR price LIKE ? OR short_description LIKE ? OR full_description LIKE ?", "#{params[:keyword]}", "%#{params[:keyword]}%", "%#{params[:keyword]}%", "%#{params[:keyword]}%", "%#{params[:keyword]}%")
+      @products_count = @products_by.count
+    end
+
+ # binding.pry
+
+
+    if params[:commit].present?
+      unless params[:price_range] == 'Select range' && params[:category] == 'Select category'
         range = params[:price_range].gsub(/ - /, ' ').split(' ')
         @products_by = Product.where('price BETWEEN ? AND ? AND category_id  = ?', range[0], range[1], params[:category])
         @products_count = @products_by.count
@@ -22,7 +31,6 @@ class ProductsController < ApplicationController
       end
     end
 
-# binding.pry
   end
 
   def index

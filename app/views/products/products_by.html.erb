@@ -2,11 +2,7 @@
 <h3>Params for products lookup </h3>
 <%= bootstrap_form_with url: products_by_path, local: true, method: :get do |f| %>
   <%= f.text_field :keyword,
-    label: "Product id or key word" %>
-
-  <%= f.text_field :price,
-    placeholder: 'Type here price',
-    label: "Price" %>
+    label: "Product by id, key word, price" %>
 
   <%= f.select :price_range,
     Product::PRICE.map { |e| "#{e[0]} - #{e[1]}" }.unshift("Select range"),
