@@ -1,0 +1,16 @@
+<h3>Select category for product</h3>
+<%= bootstrap_form_with  local: true, method: :get do |f| %>
+  <%= f.select :category_id,
+    @categories.collect {|p| [ p.name, p.id ] }.unshift("Select category"),
+    label: "Category" %>
+  <%= f.submit 'Continue' %>
+<% end %>
+<div id="test"></div>
+<script type="text/javascript">
+
+  $('select').change(function(){
+    $(this).find(':selected').data('id')
+      var category_id = $('select option:selected').val()
+      $('form').attr('action', '/categories/' + category_id + '/products/new');
+});
+</script>

@@ -1,2 +1,41 @@
-<h1>Products#_form</h1>
-<p>Find me in app/views/products/_form.html.erb</p>
+<%= bootstrap_form_with model: [@category, @product], local: true do |f| %>
+  <%= f.text_field :title %>
+  <%= f.file_field :avatar, id: "imgInp" %>
+  <%= image_tag(@product.avatar.url, alt: "avatar", style: 'width: 130px') if @product.avatar.url %>
+  <p>
+  <label>
+    <%= f.check_box :remove_avatar %>
+    Remove avatar
+  </label>
+</p>
+  <%#= f.text_field :price %>
+  <%#= f.text_field :short_description %>
+  <%#= f.text_field :full_description %>
+  <%#= f.text_field :in_stock %>
+  <%#= f.text_field :preview_image %>
+
+
+  <img id="blah" src="#" alt="your image" style='width: 130px'/>
+  <%= f.file_field :avatars, multiple: true %>
+  <%= f.submit %>
+<% end %>
+
+<script>
+function readURL(input) {
+
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+      $('#blah').attr('src', e.target.result);
+    }
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+$("#imgInp").change(function() {
+  readURL(this);
+});
+</script>
+

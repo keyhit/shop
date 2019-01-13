@@ -21,12 +21,20 @@
     In_stock: <%= product.in_stock %>
   </p>
   <p>
-    <%= image_tag product.preview_image %>
+    <%= image_tag product.preview_image if product.preview_image %>
   </p>
+    <p>
+      <%= image_tag(product.avatar.url, alt: "avatar", style: 'width: 10%') if product.avatar.url %>
+    </p>
+    <p>
+      <% product.avatars.each do |avatar|  %>
+        <%= image_tag(avatar.url, alt: "avatar", style: 'width: 10%') if avatar.url %>
+      <% end %>
+    </p>
   <p>
     Category name: <%= product.category.name %>
   </p>
+  <%= link_to "Edit", edit_category_product_path(category_id: product.category_id, id: product)%>
+  <%= link_to "Detail", category_product_path(category_id: product.category_id, id: product)%>
   <hr>
 <% end %>
-
-

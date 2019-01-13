@@ -29,6 +29,10 @@ class CategoriesController < ApplicationController
     @category = Category.new
   end
 
+  def new_product_category
+    @categories = Category.all
+  end
+
   def create
     if Category.create(categories_params)
       redirect_to categories_admin_path, notice: 'Category has been created!'

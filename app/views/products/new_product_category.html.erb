@@ -1,0 +1,7 @@
+
+<%= bootstrap_form_with url: new_product_category_path, local: true do |f| %>
+  <%= f.select :category,
+    @categories.collect {|p| [ p.name, p.id ] }.unshift("Select category"),
+    label: "Category" %>
+  <%= f.submit %>
+<% end %>

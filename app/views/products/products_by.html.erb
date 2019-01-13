@@ -1,4 +1,5 @@
-<%= @p %>
+<%= link_to 'New product', new_product_category_path%>
+
 <h3>Params for products lookup </h3>
 <%= bootstrap_form_with url: products_by_path, local: true, method: :get do |f| %>
   <%= f.text_field :keyword,
@@ -14,6 +15,5 @@
   <%= f.submit 'Show' %>
 <% end %>
 <hr>
-<%= @range if @range.present? %> 
-<%= @cat if @cat.present? %> 
+
 <%= if @products_by.present? then render template: "products/product" else "Products no finded" end %> 
